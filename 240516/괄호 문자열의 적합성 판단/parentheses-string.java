@@ -21,6 +21,7 @@ public class Main {
             else if(c == ')') {
                 if(stack.isEmpty()) {
                     System.out.println("No");
+                    break;
                 }else{
                     stack.pop();
                 }
