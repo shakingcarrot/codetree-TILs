@@ -27,6 +27,9 @@ public class Main {
 
             }
         }
+        if(!stack.isEmpty()) {
+            flag = false;
+        }
         if(!flag) {
             System.out.println("No");
         }else{
