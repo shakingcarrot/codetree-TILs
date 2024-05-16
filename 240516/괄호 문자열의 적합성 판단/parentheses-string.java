@@ -27,7 +27,7 @@ public class Main {
 
             }
         }
-        if(flag) {
+        if(!flag) {
             System.out.println("No");
         }else{
             System.out.println("Yes");
