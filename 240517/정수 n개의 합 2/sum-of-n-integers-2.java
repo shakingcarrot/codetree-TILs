@@ -9,9 +9,11 @@ public class Main {
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
         st = new StringTokenizer(br.readLine());
-        int[] arr1 = new int[N+1];
-        int[] arr2 = new int[N+1];
-        for(int i = 1; i <= N; i++){
+        int[] arr1 = new int[N];
+        int[] arr2 = new int[N];
+        arr1[0] = Integer.parseInt(st.nextToken());
+        arr2[0] = arr1[0];
+        for(int i = 1; i < N; i++){
             arr1[i] = Integer.parseInt(st.nextToken());
             arr2[i] = arr2[i-1]+arr1[i];
         }
