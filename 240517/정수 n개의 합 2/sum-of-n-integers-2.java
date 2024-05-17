@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -10,14 +9,16 @@ public class Main {
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
         st = new StringTokenizer(br.readLine());
-        int[] arr1 = new int[N];
-        arr1[0] = Integer.parseInt(st.nextToken());
-        int[] arr2 = new int[N];
-        for(int i = 1; i < N; i++){
+        int[] arr1 = new int[N+1];
+        int[] arr2 = new int[N+1];
+        for(int i = 1; i <= N; i++){
             arr1[i] = Integer.parseInt(st.nextToken());
-            arr2[i] = arr1[i-1]+arr1[i];
+            arr2[i] = arr2[i-1]+arr1[i];
         }
-        Arrays.sort(arr2);
-        System.out.println(arr2[N-1]);
+        int max = Integer.MIN_VALUE;
+        for(int j = 0; j<N-M; j++){
+            max = Math.max(max,arr2[j+M] - arr2[j]);
+        }
+        System.out.println(max);
     }
 }
