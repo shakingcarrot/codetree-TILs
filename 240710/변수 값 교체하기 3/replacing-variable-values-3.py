@@ -1,1 +1,2 @@
-print(5\n3)
+print(5)
+print(3)
